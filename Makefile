@@ -29,6 +29,9 @@ clean:
 	$(RM) *.o
 	$(RM) geometry_test
 	$(RM) *~
+<<<<<<< HEAD
 
 test: geometry_test.c
 	./geometry_test
+=======
+>>>>>>> d0e52472264e53d3511596128322fba7a12a03b4
