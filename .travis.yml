@@ -1,7 +1,4 @@
 install: make get-deps
 language: c
-script: scons
+script: make
 compiler: clang
-compiler:
-  - clang
-  - gcc
