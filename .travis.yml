@@ -1,4 +1,4 @@
-install: make get-deps
+install: make dep
 language: c
 script: make
 compiler: clang
