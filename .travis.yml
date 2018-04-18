@@ -1,3 +1,4 @@
+install: make
 language: c
 script: make
 compiler: clang
