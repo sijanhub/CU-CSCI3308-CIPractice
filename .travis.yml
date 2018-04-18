@@ -1,4 +1,4 @@
-install: make
+install: sudo make dep
 language: c
 script: make
 compiler: clang
