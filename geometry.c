@@ -1,9 +1,8 @@
 /*
  * geometry.c
- * Andy Sayler
+ * Sijan Shrestha
  * CSCI 3308
- * Summer 2014
- *
+ * Spring 2018
  * This file contains a simple geomtery functions.
  *
  */
@@ -68,4 +67,26 @@ void coord_2d_midpoint(coord_2d_t* mid, const coord_2d_t* a, const coord_2d_t* b
     mid->x = ((a->x + b->x) / 2.0 );
     mid->y = ((a->y + b->y) / 2.0 );
 
+}
+
+double coord_2d_area_triangle(const coord_2d_t* a, const
+coord_2d_t* b, const coord_2d_t* c){
+
+	/* Input Checks */
+    if(!c){
+        DEBUG(__FILE__, __LINE__, __func__, "'c' must not be NULL");
+        return;
+    }
+    if(!a){
+        DEBUG(__FILE__, __LINE__, __func__, "'a' must not be NULL");
+        return;
+    }
+    if(!b){
+        DEBUG(__FILE__, __LINE__, __func__, "'b' must not be NULL");
+        return;
+    }
+
+    /* Maths */
+	double area = (a->x*(b->y-c->y)+b->x*(c->y-a->y)+c->x*(a->y-b->y))/2;
+	return area;
 }
